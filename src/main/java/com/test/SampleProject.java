@@ -1,55 +1,14 @@
 package com.test;
 import static org.testng.Assert.assertEquals;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-
 import org.testng.annotations.Test;
-
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
-import org.apache.http.HttpStatus;
-import  org.hamcrest.Matchers;
 
-public class SampleProject extends Matchers{
+public class SampleProject {
 //GET HTTP Protocol which is used to request data from a specific resource
 	
-//@Test
- public void retrieveSpecificEmployee() {
-/**
- * Given Accept the content in JSON Format
- * AND name as ABC
- * And salary as 2000
- * When i performed the POST Request
- * Then the status code 200 ok should be returned
- * And the response content should have name as ABC
- */
-		RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1";
-		HashMap<String, String> postContent = new HashMap<String, String>();
-		{
-		
-			postContent.put("name","ABC");
-			postContent.put("salary","2000");
-			postContent.put("age","20");
-	
-			ValidatableResponse response = null;
 
-			try {
-				response = RestAssured.given()
-						.contentType(ContentType.JSON).with()
-						.body(postContent).when()
-						.post("/create")
-						.then().body("name", hasItem("ABC")).statusCode(200);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
-			System.out.println("Response :" + response);
-
-		}
-}
 // POST methods---is used to send data to a server to create the resource. 
  
  @Test

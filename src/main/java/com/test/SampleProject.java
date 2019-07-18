@@ -175,4 +175,12 @@ public class SampleProject extends Matchers{
  		System.out.println("Does Reponse contains 'Country-Name'? :" + student.toString().contains("Belgium"));
  	}
  	
+ 	
+ 	@Test
+ 	public void mailsend() {
+ 		mail test1 = new mail();
+		test1.mailm();		
+ 	
+}
+ 	
 }

@@ -7,16 +7,16 @@ node {
         }
 
 		stage('Build') {
-            sh 'mvn package shade:shade'
+            bat 'mvn package shade:shade'
             def pom = readMavenPom file:'pom.xml'
             print pom.version
             env.version = pom.version
         }
 
         stage('Image') {
-                sh 'docker stop restassured || true && docker rm restassured || true'
+                bat 'docker stop restassured || true && docker rm restassured || true'
                 cmd = "docker rmi restassured:${env.version} || true"
-                sh cmd
+                bat cmd
                 docker.build "restassured:${env.version}"
             
         }

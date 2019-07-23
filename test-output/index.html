@@ -2,9 +2,10 @@
 
 <html>
   <head>
+  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -48,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\reshmi.g\AppData\Local\Temp\testng-eclipse-309684897\testng-customsuite.xml</span>
+                    <span>C:\Users\reshmi.g\AppData\Local\Temp\testng-eclipse--69738970\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -194,13 +195,13 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\reshmi.g\AppData\Local\Temp\testng-eclipse-309684897\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\reshmi.g\AppData\Local\Temp\testng-eclipse--69738970\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.test.SampleProject&quot;/&gt;
@@ -245,34 +246,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createEmployee')
+data.setCell(0, 1, 'mailsend')
 data.setCell(0, 2, 'com.test.SampleProject')
-data.setCell(0, 3, 2048);
+data.setCell(0, 3, 2594);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'mailsend')
+data.setCell(1, 1, 'createEmployee')
 data.setCell(1, 2, 'com.test.SampleProject')
-data.setCell(1, 3, 2006);
+data.setCell(1, 3, 2265);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'deleteEmployee')
+data.setCell(2, 1, 'testDeSerialization')
 data.setCell(2, 2, 'com.test.SampleProject')
-data.setCell(2, 3, 964);
+data.setCell(2, 3, 866);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testDeSerialization')
+data.setCell(3, 1, 'testSerialization')
 data.setCell(3, 2, 'com.test.SampleProject')
-data.setCell(3, 3, 898);
+data.setCell(3, 3, 828);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testSerialization')
+data.setCell(4, 1, 'deleteEmployee')
 data.setCell(4, 2, 'com.test.SampleProject')
-data.setCell(4, 3, 895);
+data.setCell(4, 3, 795);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'updateEmployee')
 data.setCell(5, 2, 'com.test.SampleProject')
-data.setCell(5, 3, 722);
+data.setCell(5, 3, 790);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -303,26 +304,50 @@ return data;
                 <span class="method-name">createEmployee</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Test([TestResult name=createEmployee status=SUCCESS method=SampleProject.createEmployee()[pri:0, instance...)</span>
+                <span class="method-start">2265 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">deleteEmployee</span>
-                <span class="method-start">2049 ms</span>
+                <span class="method-start">2265 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Test([TestResult name=deleteEmployee status=SUCCESS method=SampleProject.deleteEmployee()[pri:0, instance...)</span>
+                <span class="method-start">3060 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">mailsend</span>
-                <span class="method-start">3013 ms</span>
+                <span class="method-start">3060 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Test([TestResult name=mailsend status=SUCCESS method=SampleProject.mailsend()[pri:0, instance:com.test.Sa...)</span>
+                <span class="method-start">5667 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testDeSerialization</span>
-                <span class="method-start">5022 ms</span>
+                <span class="method-start">5667 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Test([TestResult name=testDeSerialization status=SUCCESS method=SampleProject.testDeSerialization()[pri:0...)</span>
+                <span class="method-start">6533 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testSerialization</span>
-                <span class="method-start">5922 ms</span>
+                <span class="method-start">6533 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Test([TestResult name=testSerialization status=SUCCESS method=SampleProject.testSerialization()[pri:0, in...)</span>
+                <span class="method-start">7362 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">updateEmployee</span>
-                <span class="method-start">6830 ms</span>
+                <span class="method-start">7362 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Test([TestResult name=updateEmployee status=SUCCESS method=SampleProject.updateEmployee()[pri:0, instance...)</span>
+                <span class="method-start">8152 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

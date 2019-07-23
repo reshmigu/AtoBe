@@ -1,36 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7568" started-at="2019-07-18T07:32:44Z" finished-at="2019-07-18T07:32:52Z">
+  <suite name="Default suite" duration-ms="8167" started-at="2019-07-23T11:51:01Z" finished-at="2019-07-23T11:51:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7568" started-at="2019-07-18T07:32:44Z" finished-at="2019-07-18T07:32:52Z">
+    <test name="Default test" duration-ms="8167" started-at="2019-07-23T11:51:01Z" finished-at="2019-07-23T11:51:10Z">
       <class name="com.test.SampleProject">
-        <test-method status="PASS" signature="createEmployee()[pri:0, instance:com.test.SampleProject@5419f379]" name="createEmployee" duration-ms="2048" started-at="2019-07-18T13:02:44Z" finished-at="2019-07-18T13:02:46Z">
+        <test-method status="PASS" signature="createEmployee()[pri:0, instance:com.test.SampleProject@5c3bd550]" name="createEmployee" duration-ms="2265" started-at="2019-07-23T17:21:01Z" finished-at="2019-07-23T17:21:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createEmployee -->
-        <test-method status="PASS" signature="deleteEmployee()[pri:0, instance:com.test.SampleProject@5419f379]" name="deleteEmployee" duration-ms="964" started-at="2019-07-18T13:02:46Z" finished-at="2019-07-18T13:02:47Z">
+        <test-method status="PASS" signature="Test(org.testng.ITestResult)[pri:0, instance:com.test.SampleProject@5c3bd550]" name="Test" is-config="true" duration-ms="0" started-at="2019-07-23T17:21:04Z" finished-at="2019-07-23T17:21:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createEmployee status=SUCCESS method=SampleProject.createEmployee()[pri:0, instance:com.test.SampleProject@5c3bd550] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="deleteEmployee()[pri:0, instance:com.test.SampleProject@5c3bd550]" name="deleteEmployee" duration-ms="795" started-at="2019-07-23T17:21:04Z" finished-at="2019-07-23T17:21:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteEmployee -->
-        <test-method status="PASS" signature="mailsend()[pri:0, instance:com.test.SampleProject@5419f379]" name="mailsend" duration-ms="2006" started-at="2019-07-18T13:02:47Z" finished-at="2019-07-18T13:02:49Z">
+        <test-method status="PASS" signature="Test(org.testng.ITestResult)[pri:0, instance:com.test.SampleProject@5c3bd550]" name="Test" is-config="true" duration-ms="0" started-at="2019-07-23T17:21:05Z" finished-at="2019-07-23T17:21:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteEmployee status=SUCCESS method=SampleProject.deleteEmployee()[pri:0, instance:com.test.SampleProject@5c3bd550] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="mailsend()[pri:0, instance:com.test.SampleProject@5c3bd550]" name="mailsend" duration-ms="2594" started-at="2019-07-23T17:21:05Z" finished-at="2019-07-23T17:21:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mailsend -->
-        <test-method status="PASS" signature="testDeSerialization()[pri:0, instance:com.test.SampleProject@5419f379]" name="testDeSerialization" duration-ms="898" started-at="2019-07-18T13:02:49Z" finished-at="2019-07-18T13:02:50Z">
+        <test-method status="PASS" signature="Test(org.testng.ITestResult)[pri:0, instance:com.test.SampleProject@5c3bd550]" name="Test" is-config="true" duration-ms="0" started-at="2019-07-23T17:21:07Z" finished-at="2019-07-23T17:21:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=mailsend status=SUCCESS method=SampleProject.mailsend()[pri:0, instance:com.test.SampleProject@5c3bd550] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="testDeSerialization()[pri:0, instance:com.test.SampleProject@5c3bd550]" name="testDeSerialization" duration-ms="866" started-at="2019-07-23T17:21:07Z" finished-at="2019-07-23T17:21:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDeSerialization -->
-        <test-method status="PASS" signature="testSerialization()[pri:0, instance:com.test.SampleProject@5419f379]" name="testSerialization" duration-ms="895" started-at="2019-07-18T13:02:50Z" finished-at="2019-07-18T13:02:51Z">
+        <test-method status="PASS" signature="testSerialization()[pri:0, instance:com.test.SampleProject@5c3bd550]" name="testSerialization" duration-ms="828" started-at="2019-07-23T17:21:08Z" finished-at="2019-07-23T17:21:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSerialization -->
-        <test-method status="PASS" signature="updateEmployee()[pri:0, instance:com.test.SampleProject@5419f379]" name="updateEmployee" duration-ms="722" started-at="2019-07-18T13:02:51Z" finished-at="2019-07-18T13:02:52Z">
+        <test-method status="PASS" signature="Test(org.testng.ITestResult)[pri:0, instance:com.test.SampleProject@5c3bd550]" name="Test" is-config="true" duration-ms="0" started-at="2019-07-23T17:21:08Z" finished-at="2019-07-23T17:21:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDeSerialization status=SUCCESS method=SampleProject.testDeSerialization()[pri:0, instance:com.test.SampleProject@5c3bd550] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="updateEmployee()[pri:0, instance:com.test.SampleProject@5c3bd550]" name="updateEmployee" duration-ms="790" started-at="2019-07-23T17:21:09Z" finished-at="2019-07-23T17:21:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- updateEmployee -->
+        <test-method status="PASS" signature="Test(org.testng.ITestResult)[pri:0, instance:com.test.SampleProject@5c3bd550]" name="Test" is-config="true" duration-ms="0" started-at="2019-07-23T17:21:09Z" finished-at="2019-07-23T17:21:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSerialization status=SUCCESS method=SampleProject.testSerialization()[pri:0, instance:com.test.SampleProject@5c3bd550] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
+        <test-method status="PASS" signature="Test(org.testng.ITestResult)[pri:0, instance:com.test.SampleProject@5c3bd550]" name="Test" is-config="true" duration-ms="0" started-at="2019-07-23T17:21:10Z" finished-at="2019-07-23T17:21:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=updateEmployee status=SUCCESS method=SampleProject.updateEmployee()[pri:0, instance:com.test.SampleProject@5c3bd550] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test -->
       </class> <!-- com.test.SampleProject -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

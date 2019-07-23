@@ -1,5 +1,6 @@
 package com.test;
 
+import java.io.File;
 import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -17,10 +18,10 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 public class mail {
+	ExcelRead readExcel = new ExcelRead();
 
 	public void mailm() {
 		String host = "smtp.office365.com";
-		String to = "reshmi.g@thinkpalm.com";
 		Properties props = new Properties();
 		props.put("mail.smtp.host", host);
 		props.put("mail.smtp.auth", "true");
@@ -35,7 +36,7 @@ public class mail {
 
 						protected PasswordAuthentication getPasswordAuthentication() {
 
-							return new PasswordAuthentication("reshmi.g@thinkpalm.com", "Niranjana#26");
+							return new PasswordAuthentication(readExcel.getUserName(), readExcel.getPassword());
 
 						}
 
@@ -48,12 +49,11 @@ public class mail {
 				message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("reshmi.g@thinkpalm.com"));
 				message.setSubject("AtoBe Sample Report");
 				BodyPart messageBodyPart1 = new MimeBodyPart();
-				messageBodyPart1.setText(
-						"Please find attached Execution Sample Report.\nThanks\nReshmi");
+				messageBodyPart1.setText("Please find attached Execution Sample Report.\nThanks\nReshmi");
 				MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
-				String filename = "C:\\Users\\reshmi.g\\Desktop\\restassured1\\restassured\\RestAssuredServicesTestProject\\test-output\\emailable-report.html";
-				DataSource source = new FileDataSource(filename);
+				String filename = "test-output\\emailable-report.html";
+				DataSource source = new FileDataSource(new File("test-output//emailable-report.html"));
 				messageBodyPart2.setDataHandler(new DataHandler(source));
 				messageBodyPart2.setFileName(filename);
 				Multipart multipart = new MimeMultipart();

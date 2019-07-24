@@ -13,7 +13,8 @@ node {
         }
 
         stage('Image') {
-                bat 'docker stop restassured || exit 0 && docker rm restassured || exit 0'
+                bat 'docker stop restassured || exit 0'
+		bat 'docker rm restassured || exit 0'
                 cmd = "docker rmi restassured:${env.version} || exit 0"
                 bat cmd
 		print cmd

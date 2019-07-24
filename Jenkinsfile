@@ -1,5 +1,6 @@
+agent { 
 node {
-agent { label 'windows' }
+label 'windows' 
     withMaven(maven:'maven') {
 
         stage('Checkout') {
@@ -28,4 +29,5 @@ agent { label 'windows' }
 
     }
 
+}
 }

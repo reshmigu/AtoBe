@@ -9,12 +9,12 @@ node {
 		stage('Build') {
             bat 'mvn package shade:shade'
             def pom = readMavenPom file:'pom.xml'
-            print pom.version
             env.version = pom.version
         }
 
         stage('Image') {
-                bat '((docker stop rabbitmq) -or ($true)) -and ((docker rm rabbitmq) -or ($true))'
+                bat 'docker stop restassured'
+                bat 'docker rm restassured'
                 cmd = "docker rmi restassured:${env.version} || true"
                 bat cmd
                 docker.build "restassured:${env.version}"

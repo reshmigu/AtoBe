@@ -16,7 +16,7 @@ node {
                 bat 'docker stop restassured || exit 0 && docker rm restassured || exit 0'
                
                 cmd = "docker rmi restassured:${env.version} || exit 0"
-                bat cmd
+                powershell cmd
                 docker.build "restassured:${env.version}"
             
         }

@@ -111,7 +111,7 @@ public class SampleProject {
 	}
 
 //	POJO (Plain Old Java Object) and we need to send it to the API call
-	@Test
+	//@Test
 	public void testSerialization() {
 
 		Response response = null;
@@ -131,7 +131,7 @@ public class SampleProject {
 	}
 
 	// we have the API response and you would need to de-serialize it into a POJO
-	@Test
+	//@Test
 	public void testDeSerialization() {
 
 		Student student = RestAssured.get("http://www.thomas-bayer.com/restnames/countries.groovy").as(Student.class);

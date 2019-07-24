@@ -3,7 +3,7 @@ node {
     withMaven(maven:'maven') {
 
         stage('Checkout') {
-            git url: 'https://github.com/reshmigu/AtoBe.git', credentialsId: '94a05cc6-e2e9-4ce8-9662-37a0765fe531', branch: 'master'
+            git url: 'https://github.com/reshmigu/AtoBe.git', credentialsId: 'master', branch: 'master'
         }
 
 		stage('Build') {

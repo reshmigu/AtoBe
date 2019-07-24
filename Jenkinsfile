@@ -14,7 +14,7 @@ node {
         }
 
         stage('Image') {
-                bat 'docker stop restassured || true && docker rm restassured || true'
+                bat '((docker stop rabbitmq) -or ($true)) -and ((docker rm rabbitmq) -or ($true))'
                 cmd = "docker rmi restassured:${env.version} || true"
                 bat cmd
                 docker.build "restassured:${env.version}"

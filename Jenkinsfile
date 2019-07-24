@@ -1,4 +1,3 @@
-agent { 
 node {
 label 'windows' 
     withMaven(maven:'maven') {
@@ -30,4 +29,4 @@ label 'windows'
     }
 
 }
-}
+

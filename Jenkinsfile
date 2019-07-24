@@ -22,7 +22,7 @@ node {
         }
 
         stage ('Run') {
-	    bat "docker run -p 8081:8081 -h restassured --name restassured --net host -m=500m restassured:${env.version} ."
+	    bat "docker run -p 8081:8081 -h restassured --name restassured --net host -m=500m restassured:${env.version}"
           
         }
 

@@ -6,7 +6,7 @@ node {
             git url: 'https://github.com/reshmigu/AtoBe.git', credentialsId: 'master', branch: 'master'
         }
 
-		stage('Build') {
+	stage('Build') {
             bat 'mvn package shade:shade'
             def pom = readMavenPom file:'pom.xml'
             env.version = pom.version
@@ -14,7 +14,6 @@ node {
 
         stage('Image') {
                 bat 'docker stop restassured || exit 0 && docker rm restassured || exit 0'
-               
                 cmd = "docker rmi restassured:${env.version} || exit 0"
                 bat cmd
                 docker.build "restassured:${env.version}"

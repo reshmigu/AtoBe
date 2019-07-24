@@ -13,7 +13,7 @@ node {
         }
 
         stage('Image') {
-                powershell '((docker stop restassured) -or ($true)) -and ((docker rm restassured) -or ($true))'
+                powershell 'If ($ProcessError) {((docker stop rabbitmq) -or ($true)) -and ((docker rm rabbitmq) -or ($true))}'
                
                 cmd = "docker rmi restassured:${env.version} || true"
                 bat cmd

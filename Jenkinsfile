@@ -13,8 +13,8 @@ node {
         }
 
         stage('Image') {
-                bat 'docker stop restassured'
-                bat 'docker rm restassured'
+                powershell '((docker stop restassured) -or ($true)) -and ((docker rm restassured) -or ($true))'
+               
                 cmd = "docker rmi restassured:${env.version} || true"
                 bat cmd
                 docker.build "restassured:${env.version}"

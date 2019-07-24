@@ -17,7 +17,7 @@ node {
                 cmd = "docker rmi restassured:${env.version} || exit 0"
                 bat cmd
 		print cmd
-                docker build -t "restassured:${env.version}"
+                docker.build "restassured:${env.version}"
             
         }
 

@@ -20,7 +20,7 @@ import javax.mail.internet.MimeMultipart;
 public class mail {
 	ExcelRead readExcel = new ExcelRead();
 
-	public void mailm() {
+	public void mailm(String filePath) {
 		String host = "smtp.office365.com";
 		Properties props = new Properties();
 		props.put("mail.smtp.host", host);
@@ -52,10 +52,9 @@ public class mail {
 				messageBodyPart1.setText("Please find attached Execution Sample Report.\nThanks\nReshmi");
 				MimeBodyPart messageBodyPart2 = new MimeBodyPart();
 
-				String filename = "test-output\\emailable-report.html";
-				DataSource source = new FileDataSource(new File("test-output//emailable-report.html"));
+				DataSource source = new FileDataSource(new File(filePath));
 				messageBodyPart2.setDataHandler(new DataHandler(source));
-				messageBodyPart2.setFileName(filename);
+				messageBodyPart2.setFileName(filePath);
 				Multipart multipart = new MimeMultipart();
 				multipart.addBodyPart(messageBodyPart1);
 				multipart.addBodyPart(messageBodyPart2);

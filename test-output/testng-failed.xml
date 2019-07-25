@@ -5,8 +5,8 @@
     <classes>
       <class name="com.test.SampleProject">
         <methods>
-          <include name="Test"/>
-          <include name="mailsend"/>
+          <include name="afterAllTest"/>
+          <include name="createEmployee"/>
         </methods>
       </class> <!-- com.test.SampleProject -->
     </classes>

@@ -2,12 +2,15 @@ package com.test;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.List;
+import java.util.stream.Collectors;
 
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
+import com.test.xrayapis.TestExecution;
 import com.test.xrayapis.TestRun;
 import com.test.xrayapis.XrayAPIIntegration;
 
@@ -15,13 +18,13 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
-
 public class SampleProject {
 //GET HTTP Protocol which is used to request data from a specific resource
 
 // POST methods---is used to send data to a server to create the resource. 
 
 	XrayAPIIntegration apiIntegration = new XrayAPIIntegration();
+	XrayReport report = new XrayReport();
 
 	@Test
 	public void createEmployee() throws URISyntaxException {
@@ -46,6 +49,7 @@ public class SampleProject {
 		TestRun testRun = apiIntegration.getTestRun("TP-2");
 		if (response.getStatusCode() == 200 && !testRun.getStatus().equals("PASS"))
 			apiIntegration.updateTestCaseStatus(testRun.getId(), "PASS");
+
 		else if (response.getStatusCode() != 200 && !testRun.getStatus().equals("FAIL"))
 			apiIntegration.updateTestCaseStatus(testRun.getId(), "FAIL");
 
@@ -111,7 +115,7 @@ public class SampleProject {
 	}
 
 //	POJO (Plain Old Java Object) and we need to send it to the API call
-	//@Test
+	// @Test
 	public void testSerialization() {
 
 		Response response = null;
@@ -131,7 +135,7 @@ public class SampleProject {
 	}
 
 	// we have the API response and you would need to de-serialize it into a POJO
-	//@Test
+	// @Test
 	public void testDeSerialization() {
 
 		Student student = RestAssured.get("http://www.thomas-bayer.com/restnames/countries.groovy").as(Student.class);
@@ -144,12 +148,19 @@ public class SampleProject {
 	@Test
 	public void mailsend() {
 		mail test1 = new mail();
-		test1.mailm();
+		test1.mailm("test-output//emailable-report.html");
 
 	}
 
-	@AfterMethod
-	public void Test(ITestResult result) {
+	@AfterSuite
+	public void afterAllTest() {
+		List<TestExecution> testExecution = apiIntegration.getTestExecution();
 
+		try {
+			report.sendReportAsExcel(testExecution);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
